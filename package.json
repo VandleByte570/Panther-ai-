@@ -1,0 +1,11 @@
+{
+  "name": "panther-openclaw",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "openclaw gateway"
+  },
+  "dependencies": {
+    "@openclaw/core": "latest"
+  }
+}
