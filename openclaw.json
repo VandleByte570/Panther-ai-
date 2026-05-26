@@ -1,0 +1,40 @@
+{
+  "gateway": {
+    "port": 3000
+  },
+
+  "models": {
+    "default": {
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-chat",
+      "apiKey": "${OPENROUTER_API_KEY}"
+    }
+  },
+
+  "channels": {
+    "telegram": {
+      "accounts": {
+        "panther": {
+          "botToken": "${TELEGRAM_BOT_TOKEN}"
+        }
+      }
+    }
+  },
+
+  "tools": {
+    "profile": "full"
+  },
+
+  "agents": {
+    "default": "panther",
+    "list": [
+      {
+        "id": "panther",
+        "workspace": "./agents/panther",
+        "bindings": [
+          "telegram:panther"
+        ]
+      }
+    ]
+  }
+}
